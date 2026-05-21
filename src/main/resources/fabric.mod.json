@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "bending-realised",
+	"version": "${version}",
+	"name": "Bending Realised",
+	"description": "A mod inplementing ATLA bending styles",
+	"authors": [
+		"DoctorCrepe",
+		"Gooseyst",
+		"SirGrey"
+	],
+	"contact": {
+		"homepage": "https://github.com/DoctorCrepe3/Bending-Realised",
+		"issues": "https://github.com/DoctorCrepe3/Bending-Realised/issues"
+	},
+	"license": "",
+	"icon": "assets/bending-realised/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"doctorcrepe.bending_realised.BendingRealised"
+		],
+		"client": [
+			"doctorcrepe.bending_realised.client.BendingRealisedClient"
+		]
+	},
+	"mixins": [
+		"bending-realised.mixins.json",
+		{
+			"config": "bending-realised.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
